@@ -18,7 +18,7 @@ public class MultiEnemy : Tower
         // logica voor targetting singleEnemy
         var cols = Physics.OverlapSphere(transform.position, _radius, _layer);
 
-        if (cols.Length > 0)
+        if (cols.Length < _radius)
         {
             _return = true;
         }
